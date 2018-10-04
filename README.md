@@ -52,3 +52,27 @@ gem -v                #2.7.7
 gem install rails -v 5.2.0
 rails -v
 ```
+
+* MySQL
+```
+sudo apt-get install mysql-server
+sudo ufw allow mysql
+systemctl start mysql
+systemctl enable mysql
+
+sudo -i
+mysql
+update user set authentication_string=PASSWORD("YOUR-NEW-ROOT-PASSWORD") where User='root';
+flush privileges;
+```
+
+https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
+https://stackoverflow.com/questions/42421585/default-password-of-mysql-in-ubuntu-server-16-04/49778695
+
+* Postgres
+```
+sudo apt install postgresql postgresql-contrib -y
+```
+https://wixelhq.com/blog/how-to-install-postgresql-on-ubuntu-remote-access
+
+
